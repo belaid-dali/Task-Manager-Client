@@ -1,0 +1,60 @@
+.addtask {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+
+  form {
+    width: 70%;
+    margin: 3rem auto; 
+    display: flex;
+    align-items: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 1rem;
+    border-radius: 10px; 
+    background-color: #f8f9fa; 
+
+    input {
+      padding: 10px 15px; 
+      width: 100%;
+      border: 1px solid #ced4da; 
+      outline: none;
+      background-color: whitesmoke;
+      border-radius: 5px;
+      margin-right: 1rem; 
+
+      &:focus {
+        border-color: #80bdff; 
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+      }
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; 
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($color: #007bff, $amount: 10%); 
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .addtask {
+    form {
+      width: 90%; 
+      flex-direction: column; 
+
+      input {
+        width: calc(100% - 30px); 
+        margin-bottom: 1rem; 
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/components/_buttons.scss';
+
+.header {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+
+  &__logo {
+    h5 {
+      margin: 0;
+      color: #007bff; 
+      font-size: 1.5rem;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05); 
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    .button {
+      margin-left: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      }
+    }
+  }
+}
+
+// Mixin for gradient background
+@mixin gradient-bg {
+  background: linear-gradient(45deg, #6dd5ed, #2193b0);
+  color: white;
+}
+
+// Applying gradient background to Sign In and Sign Up buttons when user is not logged in
+.header__buttons {
+  .button {
+    @include gradient-bg;
+
+    &:hover {
+      background: darken($color: #2193b0, $amount: 10%);
+    }
+  }
+}
+
+// Styling for SignOut button when user is logged in
+.header__buttons {
+  .button {
+    background-color: #dc3545; 
+    color: white;
+
+    &:hover {
+      background-color: darken($color: #dc3545, $amount: 10%);
+    }
+  }
+}
