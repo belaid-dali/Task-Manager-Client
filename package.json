@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://belaid-dali.github.io/Task-Manager-Client/",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
